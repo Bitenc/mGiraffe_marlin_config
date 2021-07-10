@@ -1,8 +1,10 @@
 This repo contains files to update the Makeblock mGiraffe to the new Marlin Version.
 
-Some changes have still to be made to the Marlin Sourcecode:
+# Manual Steps
 
-The following block has to be copied to line 2681 of `stepper.cpp`, within the function `stepper::init()`, before the start of the timer.
+Some changes have still to be made to the Marlin Sourcecode.
+
+1. The following block has to be copied to line 2681 of `stepper.cpp`, within the function `stepper::init()`, before the start of the timer.
 
 ```
   SET_OUTPUT(X_MS1_PIN);  \
@@ -47,4 +49,4 @@ The following block has to be copied to line 2681 of `stepper.cpp`, within the f
   WRITE(E_SLEEP_PIN,1);  \
 ```
 
-change `env:custom` to `env:mega2560` in the `#elif MB(CUSTOM)` section (line 675) of the file `pins.h`
+2. Change `env:custom` to `env:mega2560` in the `#elif MB(CUSTOM)` section (line 675) of the file `pins.h`
