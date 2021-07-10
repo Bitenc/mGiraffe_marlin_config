@@ -88,7 +88,7 @@
 #define SD_DETECT_PIN  		62//A8
 #define BEEPER_PIN 			39
 
-// add this stuff to stepper.cpp before timer init
+// add this stuff to stepper.cpp before timer init (approx. line 2681 within function stepper::init())
 
 /*
 #define BOARD_PREINIT() { \
