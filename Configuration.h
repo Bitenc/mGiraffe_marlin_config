@@ -620,9 +620,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 128.34
-  #define DEFAULT_bedKi 18.65
-  #define DEFAULT_bedKd 588.75
+  #define DEFAULT_bedKp 144.59
+  #define DEFAULT_bedKi 28.47
+  #define DEFAULT_bedKd 489.57
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -755,7 +755,7 @@
   // Delta calibration menu
   // uncomment to add three points calibration menu option.
   // See http://minow.blogspot.com/index.html#4918805519571907051
-  //#define DELTA_CALIBRATION_MENU
+  #define DELTA_CALIBRATION_MENU
 
   // uncomment to add G33 Delta Auto-Calibration (Enable EEPROM_SETTINGS to store results)
   //#define DELTA_AUTO_CALIBRATION
@@ -779,7 +779,8 @@
   #define DELTA_DIAGONAL_ROD 240.0        // (mm)
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 325.00 //340.00             // (mm) Get this value from G33 auto calibrate
+  //#define DELTA_HEIGHT 325.00 //340.00             // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 305.00                        // with new metal spacers and heat isolator
 
   #define DELTA_ENDSTOP_ADJ { 0.0, 0.0, 0.0 } // Get these values from G33 auto calibrate
 
